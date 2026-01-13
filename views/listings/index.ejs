@@ -1,0 +1,8 @@
+<% layout("layouts/boilerplate.ejs") %>
+    <h1>List of all the places!</h1>
+   <!-- <form action="/listings/new" method="get">
+     <button>Create new listing</button>
+   </form> -->
+    <%for(listing of allListings){ %>
+        <a href="http://localhost:8080/listings/<%=listing._id%>"><p><%=listing.title %></p></a>
+    <% } %>

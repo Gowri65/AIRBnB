@@ -1,0 +1,9 @@
+<% layout("layouts/boilerplate.ejs") %>
+    <form action="/listings/<%=onelist._id%>?_method=PUT" method="post">
+    <h3>Upadate your listing details here :</h3>
+    <input type="text" name="listing[title]" value= <%=onelist.title%> placeholder="enter title"> <br> <br>
+    <textarea name="listing[description]" placeholder="enter description"><%= onelist.description %></textarea> <br> <br>
+    <input type="number" name="listing[price]" value= <%=onelist.price%> placeholder="enter price"> <br> <br>
+    <input type="text" name="listing[location]" value= <%=onelist.location%> placeholder="enter location"> <br> <br>
+    <input type="text" name="listing[country]" value= <%=onelist.country%> placeholder="enter country"> <br> <br>
+    <button>Submit</button>

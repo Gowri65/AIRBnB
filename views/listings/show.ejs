@@ -1,0 +1,15 @@
+<% layout("layouts/boilerplate.ejs") %>
+    <h3>Listing details : </h3>
+    <ul>
+        <li><%=onelist.title%></li>
+        <li><%=onelist.description%></li>
+        <li>&#8377; <%=onelist.price.toLocaleString("en-IN")%></li>
+        <li><%=onelist.location%></li>
+        <li><%=onelist.country%></li> <br>
+        <form action="/listings/edit/<%=onelist._id %>" method="get">
+            <button>Update</button>
+        </form> <br> 
+        <form action="/listings/<%=onelist._id%>?_method=DELETE" method="post">
+            <button>Delete</button>
+        </form>
+    </ul>
